@@ -63,6 +63,7 @@ public class LevelOne implements IMathProblem
     {
         //Random number between 2 and 11.
         num1 = (int)(Math.random() * ((11 - 2) + 1));
+        //This makes sure num1 is divisible by num2.
         num2 = num1 *  (2 + ((int)(Math.random() * ((11 - 2) + 1))));
         
         answer = num2 / num1;
