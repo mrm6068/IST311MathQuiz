@@ -73,7 +73,7 @@ public class MathQuiz {
             score += 100;
         }
         
-        System.out.println("Score is " + score);
+        System.out.println("Score for level one is " + score);
     }
     
     public static void test()
