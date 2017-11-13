@@ -41,11 +41,11 @@ public class LevelOne implements IMathProblem
     {
         num1 = 1 + (int)(Math.random() * ((35 - 1) + 1));
         
-        //Makes sure second number is smaller.
-        while(num2 > num1)
+        do
         {
         num2 = 1 + (int)(Math.random() * ((35 - 1) + 1));
-        }
+        //Repeat if num2 is larger.
+        }while(num2 > num1);
         
         answer = num1 - num2;
         problem = num1 + " - " + num2;
@@ -62,7 +62,7 @@ public class LevelOne implements IMathProblem
     public void divide()
     {
         num1 = (int)(Math.random() * ((11 - 2) + 1));
-        num2 = num1 *  2 + ((int)(Math.random() * ((11 - 2) + 1)));
+        num2 = num1 *  (2 + ((int)(Math.random() * ((11 - 2) + 1))));
         
         answer = num2 / num1;
         problem = num2 + " / " + num1;
