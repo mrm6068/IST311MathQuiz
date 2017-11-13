@@ -1,17 +1,13 @@
 
 package ist311mathquiz;
 import java.util.Scanner;
-/**
- *
- * @author Mike0_000
- */
+
 public class MathProblem {
 
 
     public static void main(String[] args) 
     {
         test();
-       
     }
     
     public static void test()
