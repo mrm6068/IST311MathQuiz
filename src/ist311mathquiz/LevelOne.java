@@ -30,6 +30,7 @@ public class LevelOne implements IMathProblem
     }
     public void add()
     {
+        //Random number between 1 and 35.
         num1 = 1 + (int)(Math.random() * ((35 - 1) + 1));
         num2 = 1 + (int)(Math.random() * ((35 - 1) + 1));
         
