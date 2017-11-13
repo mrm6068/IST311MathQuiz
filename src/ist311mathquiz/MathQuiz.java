@@ -2,7 +2,7 @@
 package ist311mathquiz;
 import java.util.Scanner;
 
-public class MathProblem {
+public class MathQuiz {
 
 
     public static void main(String[] args) 
@@ -12,7 +12,6 @@ public class MathProblem {
     
     public static void test()
     {
-    
         Scanner input = new Scanner(System.in);
         long startTime = System.nanoTime();
         
