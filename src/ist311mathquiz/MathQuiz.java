@@ -85,8 +85,8 @@ public class MathQuiz {
         if(scoreLevelOne > 399)
         {
             System.out.println("Level Score: " + scoreLevelOne);
-            System.out.println("Total Score: " + score);
-            System.out.println("Level One Passed");
+            System.out.println("Total Score: " + score + "\n");
+            System.out.println("Level One Passed\n");
             return true;//Move to next level
         }
         
@@ -164,7 +164,7 @@ public class MathQuiz {
             scoreLevelTwo += 100;
         }
         
-        System.out.println("\nScore for level Two is " + scoreLevelTwo);
+        System.out.println("\nScore for level Two is " + scoreLevelTwo + "\n");
         
         score += scoreLevelTwo;//Add level 2 score to total score
         
@@ -172,8 +172,8 @@ public class MathQuiz {
         if(scoreLevelTwo > 399)
         {
             System.out.println("Level Score: " + scoreLevelTwo);
-            System.out.println("Total Score: " + score);
-            System.out.println("Level Two Passed");
+            System.out.println("Total Score: " + score + "\n");
+            System.out.println("Level Two Passed\n");
             return true;//Move to next level
         }
         
