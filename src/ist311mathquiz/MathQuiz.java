@@ -4,16 +4,20 @@ import java.util.Scanner;
 
 public class MathQuiz {
 
-    static int score = 0;//score will be moved to a player.
+    
+    static Scanner input = new Scanner(System.in);
+    private static int score = 0;//score will be moved to a player.
+    
 
-    public static void main(String[] args) 
+    //Will return true if player passes level 1.
+    public boolean levelOne()
     {
-        Scanner input = new Scanner(System.in);
+        int scoreLevelOne = 0;
         
         System.out.println("--Level One--\n");
         
         //Question 1
-        LevelOne q1 = new LevelOne();
+        LevelOneProblem q1 = new LevelOneProblem();
         q1.randomQuestion();
         
         //Display question, get user answer.
@@ -22,11 +26,11 @@ public class MathQuiz {
         
         if(userAnswer == q1.getAnswer())//If answer is correct...
         {
-            score += 100;
+            scoreLevelOne += 100;//Add 100 to scoreLevelOne
         }
         
         //Question 2
-        LevelOne q2 = new LevelOne();
+        LevelOneProblem q2 = new LevelOneProblem();
         q2.randomQuestion();
         
         System.out.print("What is " + q2.getProblem() + ": ");
@@ -34,11 +38,11 @@ public class MathQuiz {
         
         if(userAnswer == q2.getAnswer())
         {
-            score += 100;
+            scoreLevelOne += 100;
         }
         
         //Question 3
-        LevelOne q3 = new LevelOne();
+        LevelOneProblem q3 = new LevelOneProblem();
         q3.randomQuestion();
         
         System.out.print("What is " + q3.getProblem() + ": ");
@@ -46,11 +50,11 @@ public class MathQuiz {
         
         if(userAnswer == q3.getAnswer())
         {
-            score += 100;
+            scoreLevelOne += 100;
         }
         
         //Question 4
-        LevelOne q4 = new LevelOne();
+        LevelOneProblem q4 = new LevelOneProblem();
         q4.randomQuestion();
         
         System.out.print("What is " + q4.getProblem() + ": ");
@@ -58,11 +62,11 @@ public class MathQuiz {
         
         if(userAnswer == q4.getAnswer())
         {
-            score += 100;
+            scoreLevelOne += 100;
         }
         
         //Question 5
-        LevelOne q5 = new LevelOne();
+        LevelOneProblem q5 = new LevelOneProblem();
         q5.randomQuestion();
         
         System.out.print("What is " + q5.getProblem() + ": ");
@@ -70,12 +74,32 @@ public class MathQuiz {
         
         if(userAnswer == q5.getAnswer())
         {
-            score += 100;
+            scoreLevelOne += 100;
         }
         
-        System.out.println("Score for level one is " + score);
+        System.out.println("\nScore for level one is " + scoreLevelOne);
+        
+        score += scoreLevelOne;//Add level 1 score to total score
+        
+        //400 for the level means move to next level.
+        if(scoreLevelOne > 399)
+        {
+            System.out.println("Level Score: " + scoreLevelOne);
+            System.out.println("Total Score: " + score);
+            System.out.println("Level One Passed");
+            return true;//Move to next level
+        }
+        
+        //No next level.
+        System.out.println("Game Over");
+        System.out.println("Total score: " + score);
+        return false;
+        
     }
     
+    
+   
+    //Just storing this logic for now.
     public static void test()
     {
         Scanner input = new Scanner(System.in);
@@ -84,6 +108,7 @@ public class MathQuiz {
         System.out.print("Enter something: "); 
         String s = input.nextLine();
         
+        //duration in seconds.
         long duration = (System.nanoTime() - startTime) / 1000000000;
         
         System.out.println("it took you " + duration + " seconds to type " + s);
