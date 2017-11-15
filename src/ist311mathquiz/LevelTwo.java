@@ -13,7 +13,7 @@ public class LevelTwo
     public boolean playLevelTwo()
     {
         
-        System.out.println("--Level Two--\n");
+        System.out.println("\n--LEVEL TWO--\n");
         
         //Question 1
         LevelTwoProblem q1 = new LevelTwoProblem();

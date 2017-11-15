@@ -13,7 +13,7 @@ public class LevelOne
     public boolean playLevelOne()
     {
         
-        System.out.println("\n--Level One--\n");
+        System.out.println("\n--LEVEL ONE--\n");
         
         //Question 1
         LevelOneProblem q1 = new LevelOneProblem();
@@ -81,7 +81,7 @@ public class LevelOne
         //400 for the level means move to next level.
         if(levelScore > 399)
         {
-            System.out.println("Level One Passed");
+            System.out.println("\nLevel One Passed");
             return true;//Move to next level
         }
         
