@@ -25,9 +25,10 @@ public class LevelOneProblem implements IMathProblem
             case 2: subtract(); break;
             case 3: multiply(); break;
             case 4: divide(); break;
-            default: System.out.println("Invalid");
         }
     }
+    
+    
     public void add()
     {
         //Random number between 1 and 35.
@@ -39,11 +40,13 @@ public class LevelOneProblem implements IMathProblem
     }
     public void subtract()
     {
-        num1 = 1 + (int)(Math.random() * ((35 - 1) + 1));
+        //random 10-20
+        num1 = 1 + (int)(Math.random() * ((20 - 10) + 10));
         
         do
         {
-        num2 = 1 + (int)(Math.random() * ((35 - 1) + 1));
+        //Random 1-15
+        num2 = 1 + (int)(Math.random() * ((15 - 1) + 1));
         //Repeat if num2 is larger.
         }while(num2 > num1);
         
@@ -61,10 +64,10 @@ public class LevelOneProblem implements IMathProblem
     }
     public void divide()
     {
-        //Random number between 2 and 11.
-        num1 = 2 +(int)(Math.random() * ((11 - 2) + 1));
+        //Random number between 2 and 9.
+        num1 = 2 +(int)(Math.random() * ((9 - 2) + 1));
         //This makes sure num1 is divisible by num2.
-        num2 = num1 *  (2 + ((int)(Math.random() * ((11 - 2) + 1))));
+        num2 = num1 *  (2 + ((int)(Math.random() * ((9 - 2) + 1))));
         
         answer = num2 / num1;
         problem = num2 + " / " + num1;
