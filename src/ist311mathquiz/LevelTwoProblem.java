@@ -64,7 +64,7 @@ public class LevelTwoProblem implements IMathProblem
     public void divide()
     {
         //Random number between 8 and 20.
-        num1 = (int)(Math.random() * ((20 - 8) + 1));
+        num1 = 8 + (int)(Math.random() * ((20 - 8) + 1));
         //This makes sure num1 is divisible by num2.
         num2 = num1 *  (8 + ((int)(Math.random() * ((20 - 8) + 1))));
         
