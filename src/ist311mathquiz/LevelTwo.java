@@ -1,22 +1,22 @@
 
 package ist311mathquiz;
 
+
 import java.util.Scanner;
 
-
-public class LevelOne 
+public class LevelTwo 
 {
     static Scanner input = new Scanner(System.in);
-    int levelScore = 0;
+    private int levelScore = 0;
     
     //Returns true if player passes level.
-    public boolean playLevelOne()
+    public boolean playLevelTwo()
     {
         
-        System.out.println("\n--Level One--\n");
+        System.out.println("--Level Two--\n");
         
         //Question 1
-        LevelOneProblem q1 = new LevelOneProblem();
+        LevelTwoProblem q1 = new LevelTwoProblem();
         q1.randomQuestion();
         
         //Display question, get user answer.
@@ -29,7 +29,7 @@ public class LevelOne
         }
         
         //Question 2
-        LevelOneProblem q2 = new LevelOneProblem();
+        LevelTwoProblem q2 = new LevelTwoProblem();
         q2.randomQuestion();
         
         System.out.print("What is " + q2.getProblem() + ": ");
@@ -41,7 +41,7 @@ public class LevelOne
         }
         
         //Question 3
-        LevelOneProblem q3 = new LevelOneProblem();
+        LevelTwoProblem q3 = new LevelTwoProblem();
         q3.randomQuestion();
         
         System.out.print("What is " + q3.getProblem() + ": ");
@@ -53,7 +53,7 @@ public class LevelOne
         }
         
         //Question 4
-        LevelOneProblem q4 = new LevelOneProblem();
+        LevelTwoProblem q4 = new LevelTwoProblem();
         q4.randomQuestion();
         
         System.out.print("What is " + q4.getProblem() + ": ");
@@ -65,7 +65,7 @@ public class LevelOne
         }
         
         //Question 5
-        LevelOneProblem q5 = new LevelOneProblem();
+        LevelTwoProblem q5 = new LevelTwoProblem();
         q5.randomQuestion();
         
         System.out.print("What is " + q5.getProblem() + ": ");
@@ -76,12 +76,13 @@ public class LevelOne
             levelScore += 100;
         }
        
-        System.out.println("\nLevel Score: " + levelScore);
+        System.out.println("Level Score: " + levelScore);
+        System.out.println("");
         
         //400 for the level means move to next level.
         if(levelScore > 399)
         {
-            System.out.println("Level One Passed");
+            System.out.println("Level Two Passed\n");
             return true;//Move to next level
         }
         
