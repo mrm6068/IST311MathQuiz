@@ -1,82 +1,96 @@
 
 package ist311mathquiz;
 
-/**
- *
- * @author Mike0_000
- */
-public class LevelOne implements IMathProblem 
+import java.util.Scanner;
+
+
+public class LevelOne 
 {
-    int num1;
-    int num2;
-    private int answer;
-    private String problem;
+    static Scanner input = new Scanner(System.in);
+    int levelScore = 0;
     
     
-    //This method is called to randomly choose addition, subtraction, etc.
-    public void randomQuestion()
+    public boolean playLevelOne()
     {
-        //Random number between 1 and 4
-        int randomQuestion = 1 + (int)(Math.random() * ((4 - 1) + 1));
         
-        switch(randomQuestion)
+        int scoreLevelOne = 0;
+        
+        System.out.println("--Level One--\n");
+        
+        //Question 1
+        LevelOneProblem q1 = new LevelOneProblem();
+        q1.randomQuestion();
+        
+        //Display question, get user answer.
+        System.out.print("What is " + q1.getProblem() + ": ");
+        int userAnswer = input.nextInt();
+        
+        if(userAnswer == q1.getAnswer())//If answer is correct...
         {
-            case 1: add(); break;
-            case 2: subtract(); break;
-            case 3: multiply(); break;
-            case 4: divide(); break;
-            default: System.out.println("Invalid");
+            scoreLevelOne += 100;//Add 100 to scoreLevelOne
         }
-    }
-    public void add()
-    {
-        //Random number between 1 and 35.
-        num1 = 1 + (int)(Math.random() * ((35 - 1) + 1));
-        num2 = 1 + (int)(Math.random() * ((35 - 1) + 1));
         
-        answer = num1 + num2;
-        problem = num1 + " + " + num2;
-    }
-    public void subtract()
-    {
-        num1 = 1 + (int)(Math.random() * ((35 - 1) + 1));
+        //Question 2
+        LevelOneProblem q2 = new LevelOneProblem();
+        q2.randomQuestion();
         
-        do
+        System.out.print("What is " + q2.getProblem() + ": ");
+        userAnswer = input.nextInt();
+        
+        if(userAnswer == q2.getAnswer())
         {
-        num2 = 1 + (int)(Math.random() * ((35 - 1) + 1));
-        //Repeat if num2 is larger.
-        }while(num2 > num1);
+            scoreLevelOne += 100;
+        }
         
-        answer = num1 - num2;
-        problem = num1 + " - " + num2;
-    }
-    public void multiply()
-    {
-        //Random nums between 2 and 11
-        num1 = 2 + (int)(Math.random() * ((11 - 2) + 1));
-        num2 = 2 + (int)(Math.random() * ((11 - 2) + 1));
+        //Question 3
+        LevelOneProblem q3 = new LevelOneProblem();
+        q3.randomQuestion();
         
-        answer = num1 * num2;
-        problem = num1 + " x " + num2;
-    }
-    public void divide()
-    {
-        //Random number between 2 and 11.
-        num1 = (int)(Math.random() * ((11 - 2) + 1));
-        //This makes sure num1 is divisible by num2.
-        num2 = num1 *  (2 + ((int)(Math.random() * ((11 - 2) + 1))));
+        System.out.print("What is " + q3.getProblem() + ": ");
+        userAnswer = input.nextInt();
         
-        answer = num2 / num1;
-        problem = num2 + " / " + num1;
+        if(userAnswer == q3.getAnswer())
+        {
+            scoreLevelOne += 100;
+        }
+        
+        //Question 4
+        LevelOneProblem q4 = new LevelOneProblem();
+        q4.randomQuestion();
+        
+        System.out.print("What is " + q4.getProblem() + ": ");
+        userAnswer = input.nextInt();
+        
+        if(userAnswer == q4.getAnswer())
+        {
+            scoreLevelOne += 100;
+        }
+        
+        //Question 5
+        LevelOneProblem q5 = new LevelOneProblem();
+        q5.randomQuestion();
+        
+        System.out.print("What is " + q5.getProblem() + ": ");
+        userAnswer = input.nextInt();
+        
+        if(userAnswer == q5.getAnswer())
+        {
+            scoreLevelOne += 100;
+        }
+       
+        
+        //400 for the level means move to next level.
+        if(scoreLevelOne > 399)
+        {
+            System.out.println("Level Score: " + scoreLevelOne);
+            System.out.println("");
+            System.out.println("Level One Passed\n");
+            return true;//Move to next level
+        }
+        
+        //No next level.
+        System.out.println("Game Over");
+        return false;
     }
     
-    public String getProblem()
-    {
-        return problem;
-    }
-    
-    public int getAnswer()
-    {
-        return answer;
-    }
 }
