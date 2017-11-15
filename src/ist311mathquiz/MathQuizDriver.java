@@ -17,6 +17,12 @@ public class MathQuizDriver
             nextLevel = mathQuiz.levelTwo();
         }
         
+        if(nextLevel)
+        {
+            //will add level three when created
+            System.out.println("You Win!!");
+        }
+        
         
         
     }
