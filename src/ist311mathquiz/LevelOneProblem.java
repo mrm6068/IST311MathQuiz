@@ -1,18 +1,18 @@
 
 package ist311mathquiz;
 
-
-public class LevelOneProblem implements IMathProblem 
-{
-    //nums used differently in each method, + - * /
-    int num1;
-    int num2;
-    
+/**
+ *
+ * @author Mike0_000
+ */
+public class LevelOneProblem extends MathProblem 
+{  
     private int answer;//Answer to the problem this class creates.
     private String problem;//String of the problem for output.
     
     
     //This method is called to randomly choose addition, subtraction, etc.
+    @Override
     public void randomQuestion()
     {
         //Random number between 1 and 4
@@ -27,7 +27,6 @@ public class LevelOneProblem implements IMathProblem
             case 4: divide(); break;
         }
     }
-    
     
     public void add()
     {

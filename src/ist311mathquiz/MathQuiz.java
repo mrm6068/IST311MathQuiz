@@ -16,20 +16,5 @@ public class MathQuiz {
     {
         return score;
     }
-            
-    //Just storing this logic for now.
-    public static void test()
-    {
-        Scanner input = new Scanner(System.in);
-        long startTime = System.nanoTime();
-        
-        System.out.print("Enter something: "); 
-        String s = input.nextLine();
-        
-        //duration in seconds.
-        long duration = (System.nanoTime() - startTime) / 1000000000;
-        
-        System.out.println("it took you " + duration + " seconds to type " + s);
-    }
     
 }

@@ -3,7 +3,7 @@ package ist311mathquiz;
 
 
 
-public class LevelTwoProblem implements IMathProblem
+public class LevelTwoProblem extends MathProblem
 {
     //nums used differently in each method, + - * /
     int num1;
