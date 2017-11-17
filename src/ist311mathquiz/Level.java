@@ -42,9 +42,8 @@ public class Level
             }
         }
  
-        
         //Calculate duration of level in seconds.
-        long duration = (System.nanoTime() - startTime) / 1000000000;
+        duration = (int) ((System.nanoTime() - startTime) / 1000000000);
         
         //400 for the level means move to next level.
         if(levelScore > 399)
@@ -65,6 +64,7 @@ public class Level
     
     public void setTimeBonus()
     {
+        System.out.println(duration);//testing
         if(duration < 12)
             timeBonus = 75;
         else if(duration < 18)
