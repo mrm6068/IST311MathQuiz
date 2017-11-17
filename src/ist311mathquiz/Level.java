@@ -65,11 +65,11 @@ public class Level
     
     public void setTimeBonus()
     {
-        if(duration < 12)
+        if(duration < 18)
             timeBonus = 75;
-        else if(duration < 18)
-            timeBonus = 50;
         else if(duration < 24)
+            timeBonus = 50;
+        else if(duration < 30)
             timeBonus = 25;
         else
             timeBonus = 0;
