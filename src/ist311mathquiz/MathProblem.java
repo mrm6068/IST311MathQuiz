@@ -3,7 +3,7 @@ package ist311mathquiz;
 
 /**
  *
- * Implementing classes will represent problems of different difficulty levels.
+ * Extending classes will represent problems of different difficulty levels.
  */
 public abstract class MathProblem 
 {
