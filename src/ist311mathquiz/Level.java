@@ -53,12 +53,12 @@ public class Level
             System.out.println("\nLevel Passed");
             System.out.println("\nTime: " + duration + " seconds");
             System.out.println("\nTime Bonus: " + timeBonus);
-            System.out.println("\nLevel Score: " + (levelScore));
+            System.out.println("\nLevel Score: " + levelScore);
             return true;//Move to next level
         }
         
         //No next level.
-        System.out.println("\nLevel Score: " + (levelScore));
+        System.out.println("\nLevel Score: " + levelScore);
         System.out.println("\nLevel Failed");
         return false;
     }
