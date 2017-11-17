@@ -7,12 +7,12 @@ package ist311mathquiz;
  */
 public abstract class MathProblem 
 {
-    private int answer;//Answer to the problem this class creates.
-    private String problem;//String of the problem for output.
+    protected int answer;//Answer to the problem this class creates.
+    protected String problem;//String of the problem for output.
     
     //nums used differently in each method, + - * /
-    int num1;
-    int num2;
+    protected int num1;
+    protected int num2;
     
     //This method is called to randomly choose addition, subtraction, etc.
     public void randomQuestion()

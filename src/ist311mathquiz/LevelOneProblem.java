@@ -7,78 +7,52 @@ package ist311mathquiz;
  */
 public class LevelOneProblem extends MathProblem 
 {  
-    private int answer;//Answer to the problem this class creates.
-    private String problem;//String of the problem for output.
-    
-    
-    //This method is called to randomly choose addition, subtraction, etc.
-    @Override
-    public void randomQuestion()
-    {
-        //Random number between 1 and 4
-        int randomQuestion = 1 + (int)(Math.random() * ((4 - 1) + 1));
-        
-        //Chooses random question.
-        switch(randomQuestion)
-        {
-            case 1: add(); break;
-            case 2: subtract(); break;
-            case 3: multiply(); break;
-            case 4: divide(); break;
-        }
-    }
     
     public void add()
     {
-        //Random number between 1 and 35.
-        num1 = 1 + (int)(Math.random() * ((35 - 1) + 1));
-        num2 = 1 + (int)(Math.random() * ((35 - 1) + 1));
+        //Random number between 1 and 15.
+        num1 = 1 + (int)(Math.random() * ((15 - 1) + 1));
+        num2 = 1 + (int)(Math.random() * ((15 - 1) + 1));
         
         answer = num1 + num2;
         problem = num1 + " + " + num2;
     }
+    
     public void subtract()
     {
-        //random 10-20
-        num1 = 1 + (int)(Math.random() * ((20 - 10) + 10));
+        //random 5-15
+        num1 = 5 + (int)(Math.random() * ((15 - 5) + 1));
         
         do
         {
-        //Random 1-15
-        num2 = 1 + (int)(Math.random() * ((15 - 1) + 1));
+        //Random 1-10
+        num2 = 1 + (int)(Math.random() * ((10 - 1) + 1));
         //Repeat if num2 is larger.
         }while(num2 > num1);
         
         answer = num1 - num2;
         problem = num1 + " - " + num2;
     }
+    
     public void multiply()
     {
-        //Random nums between 2 and 11
-        num1 = 2 + (int)(Math.random() * ((11 - 2) + 1));
-        num2 = 2 + (int)(Math.random() * ((11 - 2) + 1));
+        //Random nums between 1 and 10
+        num1 = 1 + (int)(Math.random() * ((10 - 1) + 1));
+        num2 = 1 + (int)(Math.random() * ((10 - 1) + 1));
         
         answer = num1 * num2;
         problem = num1 + " x " + num2;
     }
+    
     public void divide()
     {
-        //Random number between 2 and 9.
-        num1 = 2 +(int)(Math.random() * ((9 - 2) + 1));
+        //Random number between 1 and 10.
+        num1 = 1 +(int)(Math.random() * ((10 - 1) + 1));
         //This makes sure num1 is divisible by num2.
-        num2 = num1 *  (2 + ((int)(Math.random() * ((9 - 2) + 1))));
+        num2 = num1 *  (1 + ((int)(Math.random() * ((10 - 1) + 1))));
         
         answer = num2 / num1;
         problem = num2 + " / " + num1;
     }
     
-    public String getProblem()
-    {
-        return problem;
-    }
-    
-    public int getAnswer()
-    {
-        return answer;
-    }
 }

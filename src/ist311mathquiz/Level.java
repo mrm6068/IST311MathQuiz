@@ -3,15 +3,15 @@ package ist311mathquiz;
 
 import java.util.Scanner;
 
-
+//Each instantiation of this class will represent a different level.
 public class Level 
 {
-    protected static final Scanner input = new Scanner(System.in);
-    protected int levelScore = 0;
-    protected long startTime = 0;
-    protected int duration = 0;
-    protected int timeBonus = 0;
-    //protected int level = 0;
+    //Protected so each level will inherit these fields.
+    private static final Scanner input = new Scanner(System.in);
+    private int levelScore = 0;
+    private long startTime = 0;
+    private int duration = 0;
+    private int timeBonus = 0;
     
     //Returns true if player passes level.
     public boolean playLevel(int level)
@@ -45,7 +45,6 @@ public class Level
         //Calculate duration of level in seconds.
         duration = (int) ((System.nanoTime() - startTime) / 1000000000);
         
-        System.out.println("\nLevel Score: " + (levelScore));
         
         //400 for the level before bonus means move to next level.
         if(levelScore > 399)
