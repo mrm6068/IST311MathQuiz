@@ -4,6 +4,10 @@ package ist311mathquiz;
 public class LevelTwoProblem extends MathProblem
 {
     
+    /**
+     *
+     */
+    @Override
     public void add()
     {
         //Random number between 15 and 40.
@@ -14,6 +18,10 @@ public class LevelTwoProblem extends MathProblem
         problem = num1 + " + " + num2;
     }
     
+    /**
+     *
+     */
+    @Override
     public void subtract()
     {   //num between 20-50.
         num1 = 20 + (int)(Math.random() * ((50 - 20) + 1));
@@ -28,6 +36,10 @@ public class LevelTwoProblem extends MathProblem
         problem = num1 + " - " + num2;
     }
     
+    /**
+     *
+     */
+    @Override
     public void multiply()
     {
         //Random nums between 3 and 20.
@@ -38,6 +50,10 @@ public class LevelTwoProblem extends MathProblem
         problem = num1 + " x " + num2;
     }
     
+    /**
+     *
+     */
+    @Override
     public void divide()
     {
         //Random number between 3 and 15.

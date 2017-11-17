@@ -6,7 +6,7 @@ import java.util.Scanner;
 //Each instantiation of this class will represent a different level.
 public class Level 
 {
-    //Protected so each level will inherit these fields.
+   
     private static final Scanner input = new Scanner(System.in);
     private int levelScore = 0;
     private long startTime = 0;
@@ -16,29 +16,28 @@ public class Level
     //Returns true if player passes level.
     public boolean playLevel(int level)
     {
-        
-        //Timestamp start time for time bonus.
+        //Time stamp start time for time bonus.
         startTime = System.nanoTime();
         
         //Creates five problems for the level
         for(int i = 0; i < 5; i++)
         {
             //Create problem
-            MathProblem q = getProblem(level);
-            q.randomQuestion();//Randomly choose + - * or /
+            MathProblem prob = getProblem(level);
+            prob.randomQuestion();//Randomly choose + - * or /
 
             //Display question, get user answer.
-            System.out.print("What is " + q.getProblem() + ": ");
+            System.out.print("What is " + prob.getProblem() + ": ");
             int userAnswer = input.nextInt();
 
-            if(userAnswer == q.getAnswer())//If answer is correct...
+            if(userAnswer == prob.getAnswer())//If answer is correct...
             {
                 levelScore += 100;//Add 100 to levelScore
                 System.out.println("\tCorrect!");
             }
             else
             {
-                System.out.println("\tWrong! Correct answer is " + q.getAnswer() );
+                System.out.println("\tWrong! Correct answer is " + prob.getAnswer() );
             }
         }
  

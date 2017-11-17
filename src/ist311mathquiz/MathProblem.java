@@ -3,11 +3,11 @@ package ist311mathquiz;
 
 /**
  *
- * Extending classes will represent problems of different difficulty levels.
+ * Sub-classes will represent problems of different difficulty levels.
  */
 public abstract class MathProblem 
 {
-    protected int answer;//Answer to the problem this class creates.
+    protected int answer;//Answer to the problem inheriting class creates.
     protected String problem;//String of the problem for output.
     
     //nums used differently in each method, + - * /
@@ -29,6 +29,7 @@ public abstract class MathProblem
             case 4: divide(); break;
         }
     }
+    
     public String getProblem()
     {
         return problem;
