@@ -4,7 +4,7 @@ package ist311mathquiz;
 import problems.*;//Created package with classes to create problems
 import java.util.Scanner;
 
-//Each instantiation of this class will represent a different level.
+//Each instance of this class will represent a different level.
 public class Level 
 {
    
@@ -23,8 +23,8 @@ public class Level
         //Creates five problems for the level
         for(int i = 0; i < 5; i++)
         {
-            //Create problem
-            MathProblem prob = getProblem(level);
+            //Create proper problem for this level.
+            MathProblem prob = createLevelProblem(level);
             prob.randomQuestion();//Randomly choose + - * or /
 
             //Display question, get user answer.
@@ -66,11 +66,11 @@ public class Level
     
     public void setTimeBonus()
     {
-        if(duration < 12)
+        if(duration < 18)
             timeBonus = 75;
-        else if(duration < 18)
-            timeBonus = 50;
         else if(duration < 24)
+            timeBonus = 50;
+        else if(duration < 30)
             timeBonus = 25;
         else
             timeBonus = 0;
@@ -82,7 +82,7 @@ public class Level
     }
     
     //Returns a problem of passed level.
-    public MathProblem getProblem(int level)
+    public MathProblem createLevelProblem(int level)
     {
         MathProblem problem = null;
         switch(level)
