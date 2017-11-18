@@ -37,11 +37,12 @@ public class Level
             if(userAnswer == prob.getAnswer())//If answer is correct...
             {
                 levelScore += 100;//Add 100 to levelScore
-                System.out.println("\tCorrect!");
+                System.out.println("\tCorrect!\n");
             }
             else
             {
-                System.out.println("\tWrong! Correct answer is " + prob.getAnswer() );
+                System.out.println("\tWrong! Correct answer is " 
+                        + prob.getAnswer() + "\n" );
             }
         }
  
@@ -105,7 +106,7 @@ public class Level
         return problem;
     }
     
-    //Constructs proper level.
+    //Constructs proper Level.
     public Level(int level)
     {
         this.level = level;
