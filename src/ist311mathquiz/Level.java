@@ -66,7 +66,10 @@ public class Level
     
     public void setTimeBonus()
     {
-        if(duration < 18)
+        //If level was completed in under 12 seconds.
+        if(duration < 12)
+            timeBonus = 100;
+        else if(duration < 18)//Under 18 seconds...
             timeBonus = 75;
         else if(duration < 24)
             timeBonus = 50;
