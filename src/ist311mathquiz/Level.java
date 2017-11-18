@@ -9,11 +9,13 @@ public class Level
 {
    
     private static final Scanner input = new Scanner(System.in);
-    private int levelScore = 0;
-    private long startTime = 0;
-    private int duration = 0;
-    private int timeBonus = 0;
+    //Which level each instance represents.
     private int level;
+    private int levelScore = 0;
+    //For time bonus...
+    private long startTime = 0;
+    private int duration = 0;//Level duration in seconds.
+    private int timeBonus = 0;
     
     //Returns true if player passes level.
     public boolean playLevel()
@@ -100,11 +102,11 @@ public class Level
         
         return problem;
     }
+    
     //Constructs proper level.
     public Level(int level)
     {
         this.level = level;
     }
-   
    
 }
