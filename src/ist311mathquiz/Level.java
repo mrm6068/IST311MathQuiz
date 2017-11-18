@@ -98,6 +98,8 @@ public class Level
                 break;
             case 2: problem = new LevelTwoProblem();
                 break;
+            case 3: problem = new LevelThreeProblem();
+                break;
         }
         
         return problem;

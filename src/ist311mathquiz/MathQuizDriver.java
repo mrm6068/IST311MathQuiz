@@ -40,6 +40,24 @@ public class MathQuizDriver
         //Output score.
         System.out.println("\nTotal Score: " + mathQuiz.getScore());
         
+        //If level two was not passed...
+        if(!nextLevel)
+        {  
+            System.out.println("\nGame Over");
+            System.exit(0);//End program.
+        }
+        
+        System.out.println("\n--LEVEL THREE--\n");
+        
+        Level levelThree = new Level(3);//Instantiate level three.
+        nextLevel = levelThree.playLevel();//Begin level three.
+        
+        //Add level score to total score.
+        mathQuiz.setScore(mathQuiz.getScore() + levelThree.getLevelScore());
+        
+        //Output score.
+        System.out.println("\nTotal Score: " + mathQuiz.getScore());
+        
         //If level one was not passed...
         if(!nextLevel)
         {  
