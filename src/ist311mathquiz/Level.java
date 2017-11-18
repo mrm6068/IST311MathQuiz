@@ -13,9 +13,10 @@ public class Level
     private long startTime = 0;
     private int duration = 0;
     private int timeBonus = 0;
+    private int level;
     
     //Returns true if player passes level.
-    public boolean playLevel(int level)
+    public boolean playLevel()
     {
         //Time stamp start time for time bonus.
         startTime = System.nanoTime();
@@ -66,14 +67,15 @@ public class Level
     
     public void setTimeBonus()
     {
-        //If level was completed in under 12 seconds.
-        if(duration < 12)
+        //If level was completed in under given seconds.
+        //3 * level makes sure harder levels are given more time.
+        if(duration < 12 + (3 * level))//15 for level 1, 18 for level 2, etc.
             timeBonus = 100;
-        else if(duration < 18)//Under 18 seconds...
+        else if(duration < 18 + (3 * level))
             timeBonus = 75;
-        else if(duration < 24)
+        else if(duration < 24 + (3 * level))
             timeBonus = 50;
-        else if(duration < 30)
+        else if(duration < 30 + (3 * level))
             timeBonus = 25;
         else
             timeBonus = 0;
@@ -97,6 +99,11 @@ public class Level
         }
         
         return problem;
+    }
+    //Constructs proper level.
+    public Level(int level)
+    {
+        this.level = level;
     }
    
    

@@ -9,12 +9,12 @@ public class MathQuizDriver
         MathQuiz mathQuiz = new MathQuiz();//Represents this entire quiz.
          
         //Instantiate level one.
-        Level levelOne = new Level();
+        Level levelOne = new Level(1);
         
         System.out.println("\n--LEVEL ONE--\n");
         
         //Start level one. Returns false if user doesn't pass level.
-        nextLevel = levelOne.playLevel(1);
+        nextLevel = levelOne.playLevel();
         
         //Add level score to total score.
         mathQuiz.setScore(mathQuiz.getScore() + levelOne.getLevelScore());
@@ -31,8 +31,8 @@ public class MathQuizDriver
        
         System.out.println("\n--LEVEL TWO--\n");
         
-        Level levelTwo = new Level();//Instantiate level two.
-        nextLevel = levelTwo.playLevel(2);//Begin level two.
+        Level levelTwo = new Level(2);//Instantiate level two.
+        nextLevel = levelTwo.playLevel();//Begin level two.
         
         //Add level score to total score.
         mathQuiz.setScore(mathQuiz.getScore() + levelTwo.getLevelScore());

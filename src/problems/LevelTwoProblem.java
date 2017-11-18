@@ -1,7 +1,7 @@
 
 package problems;
 
-import problems.MathProblem;
+//import problems.MathProblem;
 
  /**
  * instances represent a level 2 problem.
