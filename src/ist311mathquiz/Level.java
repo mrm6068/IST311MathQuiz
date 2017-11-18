@@ -1,6 +1,7 @@
 
 package ist311mathquiz;
 
+import problems.*;//Created package with classes to create problems
 import java.util.Scanner;
 
 //Each instantiation of this class will represent a different level.

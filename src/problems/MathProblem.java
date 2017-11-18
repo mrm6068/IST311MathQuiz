@@ -1,9 +1,9 @@
 
-package ist311mathquiz;
+package problems;
 
 /**
  *
- * Sub-classes will represent problems of different difficulty levels.
+ * Sub-classes will represent a problem of different difficulty levels.
  */
 public abstract class MathProblem 
 {

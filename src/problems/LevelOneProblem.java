@@ -1,13 +1,16 @@
 
-package ist311mathquiz;
+package problems;
+
+import problems.MathProblem;
 
 /**
- *
- * @author Mike0_000
- */
+ * instances represent a level 1 problem.
+  */
 public class LevelOneProblem extends MathProblem 
 {  
-    
+    /**
+     * Level 1 addition problem.
+     */
     public void add()
     {
         //Random number between 1 and 15.
@@ -18,6 +21,9 @@ public class LevelOneProblem extends MathProblem
         problem = num1 + " + " + num2;
     }
     
+    /**
+     * Level 1 subtraction problem.
+     */
     public void subtract()
     {
         //random 5-15
@@ -34,6 +40,9 @@ public class LevelOneProblem extends MathProblem
         problem = num1 + " - " + num2;
     }
     
+    /**
+     * Level 1 multiplication problem.
+     */
     public void multiply()
     {
         //Random nums between 1 and 10
@@ -44,6 +53,9 @@ public class LevelOneProblem extends MathProblem
         problem = num1 + " x " + num2;
     }
     
+    /**
+     * Level 1 division problem.
+     */
     public void divide()
     {
         //Random number between 1 and 10.

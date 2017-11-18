@@ -1,11 +1,15 @@
 
-package ist311mathquiz;
+package problems;
 
+import problems.MathProblem;
+
+ /**
+ * instances represent a level 2 problem.
+  */
 public class LevelTwoProblem extends MathProblem
 {
-    
     /**
-     *
+     * Level 2 addition problem.
      */
     @Override
     public void add()
@@ -19,7 +23,7 @@ public class LevelTwoProblem extends MathProblem
     }
     
     /**
-     *
+     * Level 2 subtraction problem.
      */
     @Override
     public void subtract()
@@ -37,7 +41,7 @@ public class LevelTwoProblem extends MathProblem
     }
     
     /**
-     *
+     *Level 2 multiplication problem.
      */
     @Override
     public void multiply()
@@ -51,7 +55,7 @@ public class LevelTwoProblem extends MathProblem
     }
     
     /**
-     *
+     * Level 2 division problem.
      */
     @Override
     public void divide()
