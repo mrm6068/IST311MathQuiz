@@ -70,15 +70,15 @@ public class Level
     
     public void setTimeBonus()
     {
-        //If level was completed in under given seconds.
-        //3 * level makes sure harder levels are given more time.
-        if(duration < 12 + (3 * level))//15 for level 1, 18 for level 2, etc.
+        //If level was completed in under an amount of seconds.
+        //4 * level makes sure harder levels are given more time.
+        if(duration < 12 + (4 * level))//16 for level 1, 20 for level 2, etc.
             timeBonus = 100;
-        else if(duration < 18 + (3 * level))
+        else if(duration < 18 + (4 * level))
             timeBonus = 75;
-        else if(duration < 24 + (3 * level))
+        else if(duration < 24 + (4 * level))
             timeBonus = 50;
-        else if(duration < 30 + (3 * level))
+        else if(duration < 30 + (4 * level))
             timeBonus = 25;
         else
             timeBonus = 0;

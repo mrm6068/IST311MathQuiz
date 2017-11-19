@@ -7,6 +7,7 @@ package problems;
  */
 public abstract class MathProblem 
 {
+    //protected so sub-classes inherit these fields.
     protected int answer;//Answer to the problem inheriting class creates.
     protected String problem;//String of the problem for output.
     
