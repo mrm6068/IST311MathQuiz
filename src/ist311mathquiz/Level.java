@@ -9,8 +9,8 @@ public class Level
 {
    
     private static final Scanner input = new Scanner(System.in);
-    //Which level each instance represents.
-    private int level;
+    //Which level each instance represents, initialized in constructor.
+    private final int level;
     private int levelScore = 0;
     //For time bonus...
     private long startTime = 0;
@@ -20,7 +20,7 @@ public class Level
     //Returns true if player passes level.
     public boolean playLevel()
     {
-        //Time stamp start time for time bonus.
+        //Timestamp start time for time bonus.
         startTime = System.nanoTime();
         
         //Creates five problems for the level
@@ -73,7 +73,7 @@ public class Level
         //If level was completed in under an amount of seconds.
         //4 * level makes sure harder levels are given more time.
         if(duration < 12 + (4 * level))//16 for level 1, 20 for level 2, etc.
-            timeBonus = 100;
+            timeBonus = 100;//Highest time bonus.
         else if(duration < 18 + (4 * level))
             timeBonus = 75;
         else if(duration < 24 + (4 * level))

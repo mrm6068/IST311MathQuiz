@@ -47,6 +47,18 @@ public class MathQuizDriver
             System.exit(0);//End program.
         }
         
+        System.out.println("\n--BONUS LEVEL ONE--\n");
+        
+        //Play bonus one.
+        BonusLevel bonusOne = new BonusLevel();
+        bonusOne.playBonusOne();
+        
+        //Add bonus level score to total score.
+        mathQuiz.setScore(mathQuiz.getScore() + bonusOne.getLevelScore());
+        
+        //Output score.
+        System.out.println("\nTotal Score: " + mathQuiz.getScore());
+        
         System.out.println("\n--LEVEL THREE--\n");
         
         Level levelThree = new Level(3);//Instantiate level three.

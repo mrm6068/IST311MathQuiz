@@ -11,6 +11,7 @@ public class LevelOneProblem extends MathProblem
     /**
      * Level 1 addition problem.
      */
+    @Override
     public void add()
     {
         //Random number between 1 and 15.
@@ -24,6 +25,7 @@ public class LevelOneProblem extends MathProblem
     /**
      * Level 1 subtraction problem.
      */
+    @Override
     public void subtract()
     {
         //random 5-15
@@ -43,6 +45,7 @@ public class LevelOneProblem extends MathProblem
     /**
      * Level 1 multiplication problem.
      */
+    @Override
     public void multiply()
     {
         //Random nums between 1 and 10
@@ -56,6 +59,7 @@ public class LevelOneProblem extends MathProblem
     /**
      * Level 1 division problem.
      */
+    @Override
     public void divide()
     {
         //Random number between 1 and 10.
