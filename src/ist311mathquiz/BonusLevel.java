@@ -9,7 +9,6 @@ import java.util.Scanner;
  */
 public class BonusLevel 
 {
-    private static final Scanner input = new Scanner(System.in);
     //Which level each instance represents.
     private int level;
     private int levelScore = 0;
@@ -30,7 +29,8 @@ public class BonusLevel
             
         System.out.print("What is " + num2 + " / " + num1 + " + " + num3
                 + " - " + num4 + ": ");
-        int userAnswer = input.nextInt();
+        
+        int userAnswer = UserInput.getAnswer();
         
         if(userAnswer == answer)
         {
@@ -44,9 +44,7 @@ public class BonusLevel
             System.out.println("\tWrong");
             System.out.println("\nBonus Failed");
         }
-        
-        
-        
+          
     }
     
     public int getLevelScore()

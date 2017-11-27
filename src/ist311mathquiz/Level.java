@@ -7,8 +7,6 @@ import java.util.Scanner;
 //Each instance of this class will represent a different level.
 public class Level 
 {
-   
-    private static final Scanner input = new Scanner(System.in);
     //Which level each instance represents, initialized in constructor.
     private final int level;
     private int levelScore = 0;
@@ -32,7 +30,7 @@ public class Level
 
             //Display question, get user answer.
             System.out.print("What is " + prob.getProblem() + ": ");
-            int userAnswer = input.nextInt();
+            int userAnswer = UserInput.getAnswer();
 
             if(userAnswer == prob.getAnswer())//If answer is correct...
             {
@@ -48,7 +46,6 @@ public class Level
  
         //Calculate duration of level in seconds.
         duration = (int) ((System.nanoTime() - startTime) / 1000000000);
-        
         
         //400 for the level before bonus means move to next level.
         if(levelScore > 399)
