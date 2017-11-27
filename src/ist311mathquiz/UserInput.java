@@ -12,13 +12,19 @@ import java.util.Scanner;
  */
 public class UserInput {
     
-    static void getAnswer(){
-        System.out.println("Enter the answer: ");
-        Scanner input = new Scanner(System.in);
-        double guess = input.nextDouble();
+    static Scanner input = new Scanner(System.in);
+    
+    static int getAnswer()
+    {  
+        //String answer = "";
+        
+        while(!input.hasNextInt())    
+        {
+            System.out.print("\nPlease enter a positive integer:");
+            input.next();
+        }
+        
+        return Integer.parseInt(input.next());
     }
     
-    public static void main(String[] args){
-        getAnswer();
-    }
 }

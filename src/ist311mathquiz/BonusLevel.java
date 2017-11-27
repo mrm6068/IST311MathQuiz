@@ -30,7 +30,7 @@ public class BonusLevel
             
         System.out.print("What is " + num2 + " / " + num1 + " + " + num3
                 + " - " + num4 + ": ");
-        int userAnswer = input.nextInt();
+        int userAnswer = UserInput.getAnswer();
         
         if(userAnswer == answer)
         {

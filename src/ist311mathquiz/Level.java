@@ -32,7 +32,7 @@ public class Level
 
             //Display question, get user answer.
             System.out.print("What is " + prob.getProblem() + ": ");
-            int userAnswer = input.nextInt();
+            int userAnswer = UserInput.getAnswer();
 
             if(userAnswer == prob.getAnswer())//If answer is correct...
             {
