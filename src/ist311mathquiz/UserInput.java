@@ -26,5 +26,8 @@ public class UserInput {
         
         return Integer.parseInt(input.next());
     }
+    public char getResponse(){
+        return input.next().charAt(0);
+    }
     
 }
