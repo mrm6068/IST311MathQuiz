@@ -4,7 +4,7 @@ import Utilities.UserInput;
 
 /**
  *
- * @author Matt Baun <mwb5755>
+ * @author Matthew Baun <mwb5755>
  */
 public class BonusLevel2 {
     

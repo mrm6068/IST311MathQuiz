@@ -32,7 +32,7 @@ public class MenuDisplay {
         Scanner input = new Scanner(System.in);
         
         System.out.println("--=-- Math Quiz --=--");
-        System.out.println("\nThere are 3 levels of math questions" +
+        System.out.println("\nThere are 4 levels of math questions" +
                 " plus bonus levels if you complete each level with a score" +
                 " of higher than 400");
         System.out.println("Enter player name: ");
