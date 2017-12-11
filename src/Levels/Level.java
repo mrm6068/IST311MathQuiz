@@ -115,6 +115,9 @@ public class Level {
             case 3:
                 problem = new LevelThreeProblem();
                 break;
+            case 4:
+                problem = new LevelFourProblem();
+                break;
         }
 
         return problem;
