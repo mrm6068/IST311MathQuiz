@@ -5,7 +5,14 @@ import Levels.BonusLevel;
 import Levels.BonusLevel2;
 import Utilities.UserInput;
 import Utilities.Timer;
-
+/**
+ * 
+ * @author Matthew Baun <mwb5755>
+ * This is the driver/testing class that runs the program
+ * that generates timed algebra questions for students to learn from.
+ * It goes through 2 levels, a bonus level, 2 more levels,
+ * and a final bonus level
+ */
 public class MathQuizDriver {
 
     public static void main(String[] args) {
