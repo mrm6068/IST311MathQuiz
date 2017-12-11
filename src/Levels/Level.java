@@ -1,6 +1,7 @@
 package Levels;
 
 import Utilities.*;//Created Utilities package.
+import java.util.ArrayList;
 import problems.*;//Created package with classes to create problems
 
 /**
@@ -43,6 +44,7 @@ public class Level {
             } else {
                 System.out.println("\tWrong! Correct answer is "
                         + prob.getAnswer() + "\n");
+
             }
 
             Timer.sleep(1);//Sleep 2 seconds after each problem.
