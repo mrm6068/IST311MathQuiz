@@ -14,7 +14,7 @@ public class Timer
     {
         int count = 5;//Countdown from 5.
         
-        sleep(5);//Give user 5 seconds between levels to process results.
+        sleep(3);//Give user 5 seconds between levels to process results.
         
         System.out.println("Level starts in...");
         
