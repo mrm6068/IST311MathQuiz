@@ -1,20 +1,26 @@
 package ist311mathquiz;
 
+import Levels.Level;
+import Levels.BonusLevel;
+import Utilities.UserInput;
+import Utilities.Timer;
+
 public class MathQuizDriver {
 
     public static void main(String[] args) {
         boolean nextLevel = false;//Holds whether user will move on.
         MathQuiz mathQuiz = new MathQuiz();//Represents this entire quiz.
         MenuDisplay display = new MenuDisplay();
-        UserInput user1 = new UserInput();
         display.DisplayIntro();
         display.UserInfo();
-        char again = 'Y';
 
         //Instantiate level one.
         Level levelOne = new Level(1);
+        Level quit = new Level(1);
 
         System.out.println("\n--LEVEL ONE--\n");
+
+        Timer.countdown();//countdown to level start.
 
         //Start level one. Returns false if user doesn't pass level.
         nextLevel = levelOne.playLevel();
@@ -25,24 +31,14 @@ public class MathQuizDriver {
         //Output score.
         System.out.println("\nTotal Score: " + mathQuiz.getScore());
 
-        //If level one was not passed...
+        //Exits the program if the user doesn't pass the level
         if (!nextLevel) {
-            System.out.println("\nGame Over");
-            System.out.println("Restart? (Y/N)");
-
-            if (again == user1.getResponse()) {
-                System.out.println("Get ready to start Level 1 again.");
-                nextLevel = levelOne.playLevel();
-                mathQuiz.setScore(mathQuiz.getScore() + levelOne.getLevelScore());
-
-                //Output score.
-                System.out.println("\nTotal Score: " + mathQuiz.getScore());
-            }
-            System.out.println("Goodbye!");
-            System.exit(0);//End program.
+            quit.gameOver();
         }
 
         System.out.println("\n--LEVEL TWO--\n");
+
+        Timer.countdown();
 
         Level levelTwo = new Level(2);//Instantiate level two.
         nextLevel = levelTwo.playLevel();//Begin level two.
@@ -53,13 +49,14 @@ public class MathQuizDriver {
         //Output score.
         System.out.println("\nTotal Score: " + mathQuiz.getScore());
 
-        //If level two was not passed...
+        //Exits the program if the user doesn't pass the level
         if (!nextLevel) {
-            System.out.println("\nGame Over");
-            System.exit(0);//End program.
+            quit.gameOver();
         }
 
         System.out.println("\n--BONUS LEVEL ONE--\n");
+
+        Timer.countdown();
 
         //Play bonus one.
         BonusLevel bonusOne = new BonusLevel();
@@ -73,6 +70,8 @@ public class MathQuizDriver {
 
         System.out.println("\n--LEVEL THREE--\n");
 
+        Timer.countdown();
+
         Level levelThree = new Level(3);//Instantiate level three.
         nextLevel = levelThree.playLevel();//Begin level three.
 
@@ -82,10 +81,9 @@ public class MathQuizDriver {
         //Output score.
         System.out.println("\nTotal Score: " + mathQuiz.getScore());
 
-        //If level one was not passed...
+        //Exits the program if the user doesn't pass the level
         if (!nextLevel) {
-            System.out.println("\nGame Over");
-            System.exit(0);//End program.
+            quit.gameOver();
         }
 
     }

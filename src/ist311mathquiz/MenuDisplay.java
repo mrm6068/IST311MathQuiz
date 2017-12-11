@@ -43,8 +43,8 @@ public class MenuDisplay {
         setAge(playerAge);
     }
     public void UserInfo(){
-        System.out.println("Let's get started");
-        System.out.println("\n___PLAYER___");
+        System.out.println("\nLet's get started");
+        System.out.println("\n---PLAYER---");
         System.out.println("| " + getName() + " | " + getAge() + " |" );
     }
     

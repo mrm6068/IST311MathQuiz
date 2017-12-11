@@ -1,6 +1,7 @@
 
-package ist311mathquiz;
+package Levels;
 
+import Utilities.UserInput;
 import java.util.Scanner;
 
 /**
@@ -14,6 +15,11 @@ public class BonusLevel
     private int levelScore = 0;
     int answer;
     
+    
+    /**
+    *
+    *
+    */
     public void playBonusOne()
     {
         //Random 2-10
