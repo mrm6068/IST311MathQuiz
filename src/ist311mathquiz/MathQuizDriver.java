@@ -2,6 +2,7 @@ package ist311mathquiz;
 
 import Levels.Level;
 import Levels.BonusLevel;
+import Levels.BonusLevel2;
 import Utilities.UserInput;
 import Utilities.Timer;
 
@@ -85,6 +86,40 @@ public class MathQuizDriver {
         if (!nextLevel) {
             quit.gameOver();
         }
+        
+        System.out.println("\n--LEVEL FOUR--\n");
+
+        Timer.countdown();
+
+        Level levelFour = new Level(4);//Instantiate level four.
+        nextLevel = levelFour.playLevel();//Begin level four.
+
+        //Add level score to total score.
+        mathQuiz.setScore(mathQuiz.getScore() + levelFour.getLevelScore());
+
+        //Output score.
+        System.out.println("\nTotal Score: " + mathQuiz.getScore());
+
+        //Exits the program if the user doesn't pass the level
+        if (!nextLevel) {
+            quit.gameOver();
+        }
+        
+        System.out.println("\n--BONUS LEVEL TWO--\n");
+
+        Timer.countdown();
+
+        //Play bonus two.
+        BonusLevel2 bonusTwo = new BonusLevel2();
+        bonusTwo.playBonusTwo();
+
+        //Add bonus level score to total score.
+        mathQuiz.setScore(mathQuiz.getScore() + bonusOne.getLevelScore());
+
+        System.out.println("\nEnd of Game");
+        
+        //Output score.
+        System.out.println("\nTotal Score: " + mathQuiz.getScore());
 
     }
 
