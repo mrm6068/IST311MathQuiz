@@ -13,7 +13,6 @@ public class MathQuizDriver {
         MenuDisplay display = new MenuDisplay();
         display.DisplayIntro();
         display.UserInfo();
-        char again = 'Y';
 
         //Instantiate level one.
         Level levelOne = new Level(1);
@@ -34,16 +33,6 @@ public class MathQuizDriver {
         //If level one was not passed...
         if (!nextLevel) {
             System.out.println("\nGame Over");
-            System.out.println("Restart? (Y/N)");
-
-            if (again == UserInput.getResponse()) {
-                System.out.println("Get ready to start Level 1 again.");
-                nextLevel = levelOne.playLevel();
-                mathQuiz.setScore(mathQuiz.getScore() + levelOne.getLevelScore());
-
-                //Output score.
-                System.out.println("\nTotal Score: " + mathQuiz.getScore());
-            }
             System.out.println("Goodbye!");
             System.exit(0);//End program.
         }
