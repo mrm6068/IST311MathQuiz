@@ -3,7 +3,7 @@ package Utilities;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 /**
- * 
+ * Utility class for timer methods
  */
 public class Timer 
 {
