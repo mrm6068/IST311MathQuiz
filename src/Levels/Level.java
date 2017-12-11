@@ -1,10 +1,11 @@
+package Levels;
 
-package ist311mathquiz;
-
+import Utilities.*;//Created Utilities package.
 import problems.*;//Created package with classes to create problems
-import java.util.Scanner;
 
-//Each instance of this class will represent a different level.
+/**
+ *Each instance of this class will represent a different level.
+ */
 public class Level 
 {
     //Which level each instance represents, initialized in constructor.
@@ -15,7 +16,11 @@ public class Level
     private int duration = 0;//Level duration in seconds.
     private int timeBonus = 0;
     
-    //Returns true if player passes level.
+    
+    /**
+     * Plays the level this instance represents, creates 5 problems of proper level.
+     * @return true if player passes level.
+    */
     public boolean playLevel()
     {
         //Timestamp start time for time bonus.
@@ -42,6 +47,8 @@ public class Level
                 System.out.println("\tWrong! Correct answer is " 
                         + prob.getAnswer() + "\n" );
             }
+            
+            Timer.sleep(2);//Sleep 2 seconds after each problem.
         }
  
         //Calculate duration of level in seconds.
@@ -65,28 +72,38 @@ public class Level
         return false;
     }
     
+    /**
+     * Sets time bonus earned for the level this instance represents
+    */
     public void setTimeBonus()
     {
         //If level was completed in under an amount of seconds.
-        //4 * level makes sure harder levels are given more time.
-        if(duration < 12 + (4 * level))//16 for level 1, 20 for level 2, etc.
+        //5 * level makes sure harder levels are given increasingly more time.
+        if(duration < 12 + (5 * level))//17 for level 1, 22 for level 2, etc.
             timeBonus = 100;//Highest time bonus.
-        else if(duration < 18 + (4 * level))
+        else if(duration < 18 + (5 * level))
             timeBonus = 75;
-        else if(duration < 24 + (4 * level))
+        else if(duration < 24 + (5 * level))
             timeBonus = 50;
-        else if(duration < 30 + (4 * level))
+        else if(duration < 30 + (5 * level))
             timeBonus = 25;
         else
             timeBonus = 0;
     }
     
+    /**
+     * @return score for level.
+    */
     public int getLevelScore()
     {
         return levelScore;
     }
     
-    //Returns a problem of passed level.
+    /**
+     * Creates a math problem
+     * @param level - Level of problem to be created.
+     * @return - a MathProblem of proper level.
+    */
     public MathProblem createLevelProblem(int level)
     {
         MathProblem problem = null;

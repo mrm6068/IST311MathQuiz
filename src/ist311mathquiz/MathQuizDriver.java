@@ -1,12 +1,16 @@
 package ist311mathquiz;
 
+import Levels.Level;
+import Levels.BonusLevel;
+import Utilities.UserInput;
+import Utilities.Timer;
+
 public class MathQuizDriver {
 
     public static void main(String[] args) {
         boolean nextLevel = false;//Holds whether user will move on.
         MathQuiz mathQuiz = new MathQuiz();//Represents this entire quiz.
         MenuDisplay display = new MenuDisplay();
-        UserInput user1 = new UserInput();
         display.DisplayIntro();
         display.UserInfo();
         char again = 'Y';
@@ -16,6 +20,8 @@ public class MathQuizDriver {
 
         System.out.println("\n--LEVEL ONE--\n");
 
+        Timer.countdown();//countdown to level start.
+        
         //Start level one. Returns false if user doesn't pass level.
         nextLevel = levelOne.playLevel();
 
@@ -30,7 +36,7 @@ public class MathQuizDriver {
             System.out.println("\nGame Over");
             System.out.println("Restart? (Y/N)");
 
-            if (again == user1.getResponse()) {
+            if (again == UserInput.getResponse()) {
                 System.out.println("Get ready to start Level 1 again.");
                 nextLevel = levelOne.playLevel();
                 mathQuiz.setScore(mathQuiz.getScore() + levelOne.getLevelScore());
@@ -44,6 +50,8 @@ public class MathQuizDriver {
 
         System.out.println("\n--LEVEL TWO--\n");
 
+        Timer.countdown();
+        
         Level levelTwo = new Level(2);//Instantiate level two.
         nextLevel = levelTwo.playLevel();//Begin level two.
 
@@ -61,6 +69,8 @@ public class MathQuizDriver {
 
         System.out.println("\n--BONUS LEVEL ONE--\n");
 
+        Timer.countdown();
+        
         //Play bonus one.
         BonusLevel bonusOne = new BonusLevel();
         bonusOne.playBonusOne();
@@ -72,6 +82,8 @@ public class MathQuizDriver {
         System.out.println("\nTotal Score: " + mathQuiz.getScore());
 
         System.out.println("\n--LEVEL THREE--\n");
+        
+        Timer.countdown();
 
         Level levelThree = new Level(3);//Instantiate level three.
         nextLevel = levelThree.playLevel();//Begin level three.
