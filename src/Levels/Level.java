@@ -45,7 +45,7 @@ public class Level {
                         + prob.getAnswer() + "\n");
             }
 
-            Timer.sleep(2);//Sleep 2 seconds after each problem.
+            Timer.sleep(1);//Sleep 2 seconds after each problem.
         }
 
         //Calculate duration of level in seconds.
