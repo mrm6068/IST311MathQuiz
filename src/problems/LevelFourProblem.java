@@ -9,8 +9,8 @@ public class LevelFourProblem extends MathProblem{
     public void add()
     {
         //Random number between 50 and 1000.
-        num1 = 50 + (int)(Math.random() * ((50 - 1000) + 1));
-        num2 = 50 + (int)(Math.random() * ((50 - 1000) + 1));
+        num1 = 50 + (int)(Math.random() * ((1000 - 50) + 1));
+        num2 = 50 + (int)(Math.random() * ((1000 - 50) + 1));
         
         answer = num1 + num2;
         problem = num1 + " + " + num2;
@@ -22,7 +22,7 @@ public class LevelFourProblem extends MathProblem{
     @Override
     public void subtract()
     {   //num between 50-500.
-        num1 = 50 + (int)(Math.random() * ((50 - 500) + 1));
+        num1 = 50 + (int)(Math.random() * ((500 - 50) + 1));
         
         do
         {//num between 50-350. will be lower on average than num1
