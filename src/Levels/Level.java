@@ -58,14 +58,19 @@ public class Level {
             setTimeBonus();
             levelScore += timeBonus;//Add time bonus to level score.
             System.out.println("\nLevel Passed");
+            Timer.sleep(1);//Sleep to let user read results.
             System.out.println("\nTime: " + duration + " seconds");
+            Timer.sleep(1);
             System.out.println("\nTime Bonus: " + timeBonus);
+            Timer.sleep(1);
             System.out.println("\nLevel Score: " + levelScore);
+            Timer.sleep(1);
             return true;//Move to next level
         }
 
         //No next level.
         System.out.println("\nLevel Score: " + levelScore);
+        Timer.sleep(2);
         System.out.println("\nLevel Failed");
         return false;
     }

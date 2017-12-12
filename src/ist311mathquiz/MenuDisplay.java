@@ -34,11 +34,11 @@ public class MenuDisplay {
         System.out.println("--=-- Math Quiz --=--");
         System.out.println("\nThere are 4 levels of math questions" +
                 " plus bonus levels if you complete each level with a score" +
-                " of higher than 400");
-        System.out.println("Enter player name: ");
+                " of higher than 400\n");
+        System.out.print("Enter player name: ");
         playerName = input.nextLine();
         setName(playerName);
-        System.out.println("Enter player age: ");
+        System.out.print("\nEnter player age: ");
         playerAge = input.nextInt();
         setAge(playerAge);
     }
